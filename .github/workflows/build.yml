@@ -17,7 +17,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.4'
 
@@ -29,3 +29,4 @@ jobs:
         with:
           name: PolyTracker-debug
           path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
